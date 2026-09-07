@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 // DONT DELETE 
 // insane code honestly
@@ -12,7 +13,7 @@ class GeminiApi {
     // ! -------------------------- NEW THINGS -----------------------
 
     Map<String, String>? header = {
-      "x-goog-api-key": "XXXX", // testProject3's Key
+      "x-goog-api-key": dotenv.env['GEMINI_API_KEY']!, 
     };
 
     Map<String, String>? body = {
